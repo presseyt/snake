@@ -72,11 +72,11 @@ function gameState(){
   };
 
   this.draw = function(){
-    ctx.fillStyle = 'white';
+    ctx.fillStyle = 'rgb(100,150,100)';
     this.snake.forEach(pos=>{ctx.fillRect(pos[0] * gridSize, pos[1] * gridSize, gridSize, gridSize)});
     ctx.fillStyle = 'rgb(150,100,100)';
     ctx.fillRect(this.food[0] * gridSize, this.food[1] * gridSize, gridSize, gridSize);
-    ctx.fillStyle = 'rgb(100,150,100)';
+    ctx.fillStyle = 'white';
     ctx.fillText('Score:' + this.snake.length, 10,15);
     ctx.fillText('High Score:' + this.highscore, 400,15);
   };
